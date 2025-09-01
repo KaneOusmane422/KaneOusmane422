@@ -1,4 +1,5 @@
-<h1 align="center">Salut 👋, je suis Ousmane Kane</h1>
+<h1 align="center"> Salut 👋, je suis Ousmane Kane</h1>
+
 <h3 align="center">Passionné par la tech, le développement et l'apprentissage continu</h3>
 
 <p align="center">
