@@ -103,3 +103,101 @@ typeEffect();
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Ousmane Kane</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #7c3aed, #06b6d4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    transition: transform 0.3s, color 0.3s;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  h1:hover {
+    transform: scale(1.2);
+    color: #ffe600;
+  }
+
+  button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: rgba(255,255,255,0.5);
+  }
+
+  /* Typing effect */
+  .typing {
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<h1 id="hello" class="typing">Hello World!</h1>
+<button onclick="changeMessage()">Clique ici pour découvrir</button>
+
+<script>
+const messages = [
+    "Hello World!",
+    "Bienvenue sur mon portfolio !",
+    "Je suis Ousmane Kane — Développeur Web",
+    "Projets et créations à découvrir...",
+    "Let's code together!"
+];
+
+let index = 0;
+
+function typeEffect(text, element, speed = 100) {
+    element.textContent = "";
+    let i = 0;
+    const interval = setInterval(() => {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+        } else {
+            clearInterval(interval);
+        }
+    }, speed);
+}
+
+function changeMessage() {
+    const element = document.getElementById('hello');
+    typeEffect(messages[index], element);
+    index = (index + 1) % messages.length;
+}
+</script>
+
+</body>
+</html>
+
