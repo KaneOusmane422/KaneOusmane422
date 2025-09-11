@@ -51,63 +51,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Animation Profil</title>
-<style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #0f1724;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    flex-direction: column;
-  }
-  .animated-text {
-    font-size: 2rem;
-    font-weight: 600;
-    border-right: 2px solid #fff;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-  }
-</style>
-</head>
-<body>
-
-<h1>Ousmane Kane — Développeur</h1>
-<div id="text" class="animated-text"></div>
-
-<script>
-const text = "Ce profil est en constante évolution...";
-const container = document.getElementById('text');
-let index = 0;
-
-function typeEffect() {
-    if(index < text.length){
-        container.style.width = `${index + 1}ch`;
-        container.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 100); // vitesse de l'animation
-    } else {
-        setTimeout(() => { // Réinitialiser l'animation après 2 secondes
-            container.textContent = "";
-            index = 0;
-            typeEffect();
-        }, 2000);
-    }
-}
-
-typeEffect();
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio — Ousmane Kane</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -167,37 +110,8 @@ typeEffect();
 <h1 id="hello" class="typing">Hello World!</h1>
 <button onclick="changeMessage()">Clique ici pour découvrir</button>
 
-<script>
-const messages = [
-    "Hello World!",
-    "Bienvenue sur mon portfolio !",
-    "Je suis Ousmane Kane — Développeur Web",
-    "Projets et créations à découvrir...",
-    "Let's code together!"
-];
-
-let index = 0;
-
-function typeEffect(text, element, speed = 100) {
-    element.textContent = "";
-    let i = 0;
-    const interval = setInterval(() => {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-        } else {
-            clearInterval(interval);
-        }
-    }, speed);
-}
-
-function changeMessage() {
-    const element = document.getElementById('hello');
-    typeEffect(messages[index], element);
-    index = (index + 1) % messages.length;
-}
-</script>
 
 </body>
 </html>
+
 
