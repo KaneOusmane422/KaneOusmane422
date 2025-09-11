@@ -45,5 +45,4 @@
 ### 🔗 Liens utiles
 
 - 💼 [Mon LinkedIn](https://linkedin.com/ousmane-kane
-- 🌐 [Portfolio (à venir ?)]()
-
+- 🌐 okane2858@gmail.com
