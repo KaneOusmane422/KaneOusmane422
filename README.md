@@ -81,3 +81,60 @@ Merci pour la visite ! 😊
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:okane2858@gmail.com)  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ton-profil)  
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animation Profil</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f1724;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .animated-text {
+    font-size: 2rem;
+    font-weight: 600;
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+</style>
+</head>
+<body>
+
+<h1>Ousmane Kane — Développeur</h1>
+<div id="text" class="animated-text"></div>
+
+<script>
+const text = "Ce profil est en constante évolution...";
+const container = document.getElementById('text');
+let index = 0;
+
+function typeEffect() {
+    if(index < text.length){
+        container.style.width = `${index + 1}ch`;
+        container.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 100); // vitesse de l'animation
+    } else {
+        setTimeout(() => { // Réinitialiser l'animation après 2 secondes
+            container.textContent = "";
+            index = 0;
+            typeEffect();
+        }, 2000);
+    }
+}
+
+typeEffect();
+</script>
+
+</body>
+</html>
